@@ -1,84 +1,251 @@
-/*  Mobile first*/
+/* Mobile first */
 
-/* Navigatie */
-li,a{
-    text-decoration: none;
-    list-style-type: none;
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 1em;
-    margin-right: 1em;
-    color: rgb(0, 45, 114);
-}
 
 /* Body */
 
+/* Navigatie */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 45, 114, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 0.8em 1em;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+/*Verandert de achtergrondkleur bij hover*/
+li a:hover:not(.active) {
+    background-color: rgb(255, 199, 44);
+}
+
+.active{
+    background-color:rgb(255, 199, 44);
+}
+
+
 body{
     font-family: helvetica;
+    color: rgb(0, 45, 114);
 }
 
-
-button{
-    margin-left: 2em;
-}
-button:hover{
-    transform: rotate(360deg);
-    transition: transform  2s;
+main{
+    display: inline-block;
+    margin-top: 12em;
 }
 
-h4{
-    text-decoration: underline;
-    color: blue;
-    display: inline;
-    margin-left: 2em;
-    margin-right: 0.4em;
+legend{
+    background-color: rgba(0, 45, 114, 0.9);
+    color: white;
+    margin-left: 1em;
+}
+
+fieldset{
+     display: flex;
+     background-image: url(ovchipkaart.jpg);
+     background-size: cover;
+     border-style: solid;
+     padding: 8em;
+     padding-left: 7em;
+}
+
+label{
+    background-color: rgba(0, 45, 114, 0.5);
+    color: white;
+    text-align: center;
+}
+
+p{
+    margin-left: 5em;
+    margin-top: 1.3em;
+    font-size: 2em;
+}
+
+#registreer{
+     display: flex;
+     margin-top: 2em;
+     background-image: url(fieldset.jpg);
+     background-size: cover;
+     border-style: solid;
+     padding: 8em;
+     padding-left: 7em;
 }
 
 img{
     max-width: 100%;
 }
 
-label{
-    display: block;
+#image {
+    position:relative;
+    max-width: 100%;
+}
+#image img {
+    position:absolute;
+    left:0;
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
-
-fieldset{
-    border-style: solid;
-    border-color: rgb(255, 199, 44);
-    background-color: rgb(255, 199, 44);
-    margin-top: 2em;
+#image img.top:hover {
+    opacity:0;
 }
 
-legend{
-    background-color:rgb(0, 45, 114);
-    color:white;
-}
-
-/* Na mediaquerie */
-
-@media all and (min-width: 890px){
-
+/* Na mediaquerie voor ipad*/
+@media all and (min-width: 30em) and (max-width: 60em){
     li,a{
-    display: inline-flex;
-    margin-top: 1em;
-    margin-left: 4.5em;
-    color: rgb(0, 45, 114);
+        display: flex;
+        margin-top: 1em;
+        margin-left: 5.3em;
+        color: rgb(0, 45, 114);
+        font-size: 1em;
 }
-     li, a:hover{
+
+    li, a:hover{
         color: rgb(255, 199, 44);
-     }
-    fieldset{
-        background-color: rgba(255, 199, 44, 0.8);
     }
-    form{
+
+    fieldset{
+        display: flex;
+        background-image: url(ovchipkaart.jpg);
+        background-size: cover;
+        border-style: solid;
+        padding: 10em;
+        padding-left: 7em;
+        margin-top: 4em;
+        margin-left: 12em;
+}
+
+    #registreer{
+        display: flex;
+        margin-top: 2em;
+        background-image: url(fieldset.jpg);
+        background-size: cover;
+        border-style: solid;
+        padding: 8em;
+        padding-left: 7em;
+}
+
+    p{
+        margin-left: 12em;
+        margin-top: 2em;
+        font-size: 2em;
+}
+
+   legend{
+        background-color: rgba(0, 45, 114, 0.9);
+        color: white;
+        margin-left: 1em;
+}
+
+   label{
+        background-color: rgba(0, 45, 114, 0.5);
+        color: white;
+        text-align: center;
+}
+
+/*Bij :hover verandert de img*/
+   #image {
+        position:relative;
+        max-width: 100%;
+}
+   #image img {
+        position:absolute;
+        left:0;
+        opacity: 1;
+        -webkit-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+}
+
+    #image img.top:hover {
+        opacity:0;
+}
+
+    main{
+        display: inline-block;
+        margin-top: 17em;
+    }
+}
+
+
+/* Na mediaquerie voor desktop*/
+
+@media all and (min-width: 60em){
+    li,a{
+        display: flex;
+        margin-top: 1em;
+        margin-left: 8.5em;
+        color: rgb(0, 45, 114);
+        font-size: 1.1em;
+}
+
+    li, a:hover{
+        color: rgb(255, 199, 44);
+}
+
+    main{
+        display: inline-block;
+        margin-top: 25em;
+}
+
+    fieldset{
+        display: flex;
+        background-image: url(ovchipkaart.jpg);
+        background-size: cover;
+        border-style: solid;
+        padding: 10em;
+        padding-left: 9em;
+        margin-left: 26em;
+        margin-top: 3em;
+}
+
+    #registreer{
         display: flex;
         margin-top: 4em;
-        margin-left: 30em;
-    }
+        background-image: url(fieldset.jpg);
+        background-size: cover;
+        border-style: solid;
+        padding: 10em;
+        padding-left: 9em;
+}
 
-    .background{
-        background-image: url(paris.jpg);
-        background-repeat: no-repeat;
+    p{
+        margin-left: 19em;
+        margin-top: 2em;
+        font-size: 2em;
 }
+
+    #image {
+        position:relative;
+        max-width: 100%;
 }
+
+    #image img {
+        position:absolute;
+        left:0;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+}
+
+    #image img.top:hover {
+        opacity:0;
+}
+
+}
+
+/* Bronnen */
+/* http://hansstol.totaldesign.nl/nl/ns.html */
+/* http://www.ns.nl/ */
