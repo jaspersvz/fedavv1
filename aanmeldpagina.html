@@ -7,40 +7,49 @@
     <meta name="viewport" content="device-width, initial-scale=1">
 </head>
 <body>
-   <header>
-        <img src="backgroundns.jpg" alt="NSfoto">
-         <nav>
-             <ul>
-               <li><a href="overzichtspagina.html">Overzicht</a></li>
-               <li><a href="aanmeldpagina.html">Aanmelden</a></li>
-             </ul>
-         </nav>
-       </header>
-
-   <div class="background">
-    <form>
-        <fieldset>
-            <legend>Meld je nu aan!</legend>
-              <label for="Gebruikersnaam">Gebruikersnaam:</label><input type="text" id="Gebruikersnaam">
-              <label for="Wachtwoord">Wachtwoord:</label><input                                 type="password" id="Wachtwoord">
-              <button type="submit" id="aanmelden">Aanmelden</button>
-        </fieldset>
-    </form>
-
-    <form>
-     <fieldset>
-      <legend>Registreer!</legend>
-        <label for="naam">Naam:</label> <input type="text" id="naam" required>
-        <label for="straatnaam">Straatnaam:</label><input type="text" id="straatnaam">
-        <label for="nummer">Nummer:</label> <input type="number" id="nummer">
-        <label for="postcode">Postcode:</label><input type="text" id="postcode">
-        <label for="plaats">Plaats:</label><input type="text" id="plaats">
-        <label for="telefoonnummer">Telefoonnummer:</label><input type="tel" id="telefoonnummer">
-        <label for="email">E-mail:</label><input type="email" id="email">
-        <button type="submit" id="registreren">Registreren:</button>
-     </fieldset>
-    </form>
+    <div id="image">
+        <img class="bottom" src="backgroundns.jpg" alt="back1"/>
+        <img class="top" src="paris.jpg" alt="back2"/>
     </div>
+
+     <header>
+        <nav>
+            <ul>
+                <li><a href="overzichtspagina.html">Home</a></li>
+                <li><a href="aanmeldpagina.html">Verhalen</a></li>
+                <li><a href="aanmeldpagina.html">Contact</a></li>
+                <li><a class="active" href="aanmeldpagina.html">Login</a></li>
+            </ul>
+        </nav>
+     </header>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Meld je nu aan!</legend>
+                <label for="Gebruikersnaam">Gebruikersnaam:</label><input type="text" id="Gebruikersnaam">
+                <label for="Wachtwoord">Wachtwoord:</label><input                                 type="password" id="Wachtwoord">
+                <button type="submit" id="aanmelden">Aanmelden</button>
+            </fieldset>
+        </form>
+
+
+       <p> Of: </p>
+        <form>
+            <fieldset id="registreer">
+              <legend>Registreer!</legend>
+              <label for="naam">Naam:</label> <input type="text" id="naam" required>
+              <label for="straatnaam">Straatnaam:</label><input type="text" id="straatnaam">
+              <label for="nummer">Nummer:</label> <input type="number" id="nummer">
+              <label for="postcode">Postcode:</label><input type="text" id="postcode">
+              <label for="plaats">Plaats:</label><input type="text" id="plaats">
+              <label for="telefoonnummer">Telefoonnummer:</label><input type="tel" id="telefoonnummer">
+              <label for="email">E-mail:</label><input type="email" id="email">
+                <button type="submit" id="registreren">Registreren:</button>
+            </fieldset>
+        </form>
+     </main>
 
 </body>
 </html>
+
