@@ -1,32 +1,65 @@
 /* Mobile first */
 
-/* Navigatie */
-
-li, a{
-    text-decoration: none;
-    list-style-type: none;
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 1em;
-    margin-right: 1em;
-    color: rgb(0, 45, 114);
-}
 
 /* Body */
+/* Navigatie */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 45, 114, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 0.8em 1em;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(255, 199, 44);
+    color: white;
+    transform-style: preserve-3d;
+}
+
+.active{
+    background-color:rgb(255, 199, 44);
+}
+
 
 body{
     font-family: helvetica;
     color: rgb(0, 45, 114);
 }
 
+main{
+    margin-top: 8em;
+}
+
+form{
+    margin-left: 4em;
+    margin-top: 6em;
+}
+
 article{
     border-style: solid;
     border-color: rgb(255, 199, 44);
-    margin-top: 2em;
+    margin-top: 12em;
+    margin-bottom: 4em;
     background-color: rgb(255, 199, 44);
 }
 
-h2{
+h1{
     background-color: rgb(0, 45, 114);
     padding: 0.5em;
     font-size: 1.2em;
@@ -34,61 +67,120 @@ h2{
     text-align: center;
 }
 
-h4{
-    text-decoration: underline;
-    color: blue;
-    display: inline;
-    margin-left: 1em;
-    margin-right: 0.1em;
-}
-
 img{
     max-width: 100%;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
-form{
-    margin-left: 4em;
-    margin-top: 3em;
+
+#image {
+    position:relative;
+    max-width: 100%;
+}
+#image img {
+    position:absolute;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
-button:hover{
-    transform: rotate(360deg);
-    transition: transform  2s, background-color 2s;
+#image img.top:hover {
+    opacity:0;
 }
 
-/* Na mediaquerie */
-
-@media all and (min-width: 890px){
-
+/* Na mediaquerie voor ipad*/
+@media all and (min-width: 30em) and (max-width: 60em){
     li,a{
-    display: inline-flex;
-    margin-top: 1em;
-    margin-left: 4.5em;
-    color: rgb(0, 45, 114);
+        display: flex;
+        margin-top: 1em;
+        margin-left: 3.1em;
+        color: rgb(0, 45, 114);
+        font-size: 1em;
 }
+
+    li, a:hover{
+        color: rgb(255, 199, 44);
+}
+
     article{
         display: inline-block;
-        column-count: 3;
-        background-color: rgba(255, 199, 44, 0.8);
+        column-count: 2;
+        background-color: rgb(255, 199, 44);
         margin-bottom: 1em;
     }
 
     form{
+        margin-left: 18em;
+}
+
+    main{
+        margin-top: 16em;
+}
+
+    #image {
+        position:relative;
+        max-width: 100%;
+}
+    #image img {
+        position:absolute;
+        left:0;
+        opacity: 1;
+        -webkit-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+}
+
+    #image img.top:hover {
+    opacity:0;
+    }
+}
+
+
+/* Na mediaquerie voor desktop*/
+
+@media all and (min-width: 60em){
+
+    li,a{
+        display: flex;
+        margin-top: 1em;
+        margin-left: 8em;
+        color: rgb(0, 45, 114);
+        font-size: 1.1em;
+}
+    li, a:hover{
+        color: rgb(255, 199, 44);
+}
+    main{
+        display: flex;
+        margin-top: 20em;
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-left: 3em;
+        padding-right: 3em;
+        background-color: rgba(255, 199, 44);
+    }
+
+    form{
+        float: 30em;
         margin-left: 31em;
 }
 
-    .background{
-        background-image: url(paris.jpg);
-        background-repeat: no-repeat;
-    }
+    #image {
+        position:relative;
+        max-width: 100%;
+}
+    #image img {
+        position:absolute;
+        left:0;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+}
 
-    li, a:hover{
-        color: rgb(255, 199, 44);
+    #image img.top:hover {
+        opacity:0;
 }
 }
 
 /* Bronnen */
 /* http://hansstol.totaldesign.nl/nl/ns.html */
 /* http://www.ns.nl/ */
-
 
